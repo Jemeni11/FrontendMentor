@@ -1,8 +1,5 @@
 # FrontendMentor
-A repo containing solutions to challenges on www.frontendmentor.
-io
-
-<br>
+A repo containing solutions to challenges on www.frontendmentor.io
 
 # How to use
 The code snapshots are organized in multiple branches where every branch represents a challenge.
