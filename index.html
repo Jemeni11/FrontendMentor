@@ -1,43 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <title>Frontend Mentor | Expenses chart component</title>
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div id="root">
+    <section id="header" class="pd_br">
+      <div>
+        <p>My balance</p>
+        <p class="fw_fs">$921.48</p>
+      </div>
+      <div>
+        <img src="./images/logo.svg" alt="logo" />
+      </div>
+    </section>
+    <section id="chart_area_container" class="pd_br">
+      <div id="chart_area_top">
+        <p class="fw_fs">Spending - Last 7 days</p>
+      </div>
+      <section id="chart_area_main">
+        <div>
+          <div class="column_container" onmouseover="openToolTip('mon')">
+            <div class="column">
+              <span id="mon" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">mon</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('tue')">
+            <div class="column">
+              <span id="tue" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">tue</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('wed')">
+            <div class="column">
+              <span id="wed" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">wed</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('thu')">
+            <div class="column">
+              <span id="thu" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">thu</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('fri')">
+            <div class="column">
+              <span id="fri" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">fri</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('sat')">
+            <div class="column">
+              <span id="sat" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">sat</div>
+        </div>
+        <div>
+          <div class="column_container" onmouseover="openToolTip('sun')">
+            <div class="column">
+              <span id="sun" class="tooltip"></span>
+            </div>
+          </div>
+          <div class="column_label">sun</div>
+        </div>
+      </section>
+      <hr />
+      <div id="chart_area_bottom">
+        <p>Total this month</p>
+        <div id="chart_area_footer">
+          <div>
+            <p class="fw_fs">$478.33</p>
+          </div>
+          <div>
+            <p>+2.4%</p>
+            <p>from last month</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by 
+    <a href="https://github.com/Jemeni11">Emmanuel Jemeni</a>.
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>

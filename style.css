@@ -1,0 +1,169 @@
+:root {
+  /* Primary */
+  --soft_red: hsl(10, 79%, 65%); 
+  --cyan: hsl(186, 34%, 60%); 
+  /* Neutral */
+  --dark_brown: hsl(25, 47%, 15%); 
+  --medium_brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%); 
+  --very_pale_orange: hsl(33, 100%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--cream);
+}
+
+#root {
+  width: 40%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  background-color: var(--soft_red);
+  color: var(--very_pale_orange);
+}
+
+#header div p:last-child {
+  color: var(--very_pale_orange);
+}
+
+#chart_area_container {
+  background-color: var(--very_pale_orange);
+  width: 100%;
+}
+
+#chart_area_top {
+  color: var(--dark_brown);
+}
+
+#chart_area_main {
+  display: flex;
+  padding: 1rem 0;
+  width: 100%;
+  min-height: 200px;
+}
+
+#chart_area_main > div {
+  margin-top: 1rem;
+  padding: 0.25rem;
+  flex: 0.8;
+}
+
+.column_container {
+  transform: rotate(180deg);
+  height: 7rem;
+}
+
+.column {
+  background-color: var(--soft_red);
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.column:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tooltip {
+  position: absolute;
+  visibility: hidden;
+  background-color: var(--dark_brown);
+  color: var(--very_pale_orange);
+  transform: rotate(180deg);
+  padding: 3px;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.show {
+  visibility: visible;
+}
+
+.column_label {
+  text-align: center;
+  color: var(--medium_brown);
+}
+
+hr {
+  color: var(--very_pale_orange);
+  font-weight: 400;
+}
+
+#chart_area_bottom {
+  padding: 2rem 0;
+}
+
+#chart_area_bottom > p {
+  font-weight: 400;
+  color: var(--medium_brown);
+}
+
+#chart_area_footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+#chart_area_footer > div:first-child > p:first-child {
+  color: var(--dark_brown);
+}
+
+#chart_area_footer > div:last-child > p:first-child {
+  font-weight: 400;
+  color: var(--dark_brown);
+}
+
+#chart_area_footer > div:last-child > p:last-child {
+  font-weight: 400;
+  color: var(--medium_brown);
+}
+
+/* Classes */
+.pd_br {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.fw_fs {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 775px) and (min-width: 375px) {
+  #root {
+    width: 80vw;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #root {
+    width: 90vw;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  .column_container {
+    height: 7rem;
+  }
+}
