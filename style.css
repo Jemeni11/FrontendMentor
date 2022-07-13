@@ -1,0 +1,100 @@
+:root {
+  /* Primary */
+  --light_cyan: hsl(193, 38%, 86%);
+  --neon_green: hsl(150, 100%, 66%);
+  /* Neutral */
+  --grayish_blue: hsl(216, 19%, 38%);
+  --dark_grayish_blue: hsl(219, 19%, 24%);
+  --dark_blue: hsl(218, 23%, 16%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  background-color: var(--dark_blue);
+}
+
+main {
+  position: relative;
+  background-color: var(--dark_grayish_blue);
+  margin: auto;
+  padding: 1.5rem;
+  margin-top: 10%;
+  margin-bottom: 7%;
+  width: 40%;
+  height: 30%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  color: var(--neon_green);
+  padding: 1rem 0;
+  letter-spacing: 0.15rem;
+  line-height: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#advice {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--light_cyan);
+  text-align: center;
+}
+
+#divider {
+  padding: 2rem 0;
+  width: 90%;
+}
+
+#dice--container {
+  border-radius: 50%;
+  background-color: var(--neon_green);
+  position: absolute;
+  bottom: -26px;
+}
+
+#dice--container:hover {
+  box-shadow: 0 0 1rem var(--light_cyan);
+}
+
+#dice {
+  padding: 1rem 1rem 0.65rem 1rem;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    padding: 1rem;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 80%;
+    height: 55%;
+  }
+
+  #advice {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 600px) {
+  main {
+    padding: 1.25rem;
+    margin-top: 12%;
+    margin-bottom: 10%;
+    width: 70%;
+    height: 50%;
+  }
+
+  #advice {
+    font-size: 26px;
+  }
+}
