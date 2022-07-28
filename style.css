@@ -1,0 +1,261 @@
+:root {
+  /* Primary */
+  --Strong_cyan: rgb(38, 192, 171);
+  /* Neutral */
+  --Very_dark_cyan: rgb(0, 73, 77);
+  --Dark_grayish_cyan: hsl(186, 14%, 43%);
+  --Grayish_cyan: hsl(184, 14%, 56%);
+  --Light_grayish_cyan: hsl(185, 41%, 84%);
+  --Very_light_grayish_cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--Light_grayish_cyan);
+}
+
+#main {
+  height: 75vh;
+  width: 70vw;
+  margin: auto;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+input {
+  font-size: 24px;
+  font-weight: 700;
+  padding-right: 1rem;
+  color: var(--Very_dark_cyan);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active {
+  outline: 2px solid var(--Strong_cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#tip-calculator {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--White);
+  margin: 5vh 0;
+  border-radius: 1rem;
+}
+
+#flex-item-1 {
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+#bill-container,
+#people-container {
+  padding: 1rem;
+}
+
+#bill-container > p,
+#people-container > p {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.35rem;
+}
+
+#bill-container > input,
+#people-container > input {
+  width: 100%;
+  border-radius: 6px;
+  text-align: right;
+  background-color: rgb(244, 248, 251);
+  background-repeat: no-repeat;
+  background-position: center left 3%;
+}
+
+#bill-container > input {
+  background-image: url("./images/icon-dollar.svg");
+}
+
+#people-container > input {
+  background-image: url("./images/icon-person.svg");
+}
+
+.error {
+  color: red;
+}
+
+.input-error {
+  outline: 2px solid red;
+}
+
+.input-error:focus,
+.input-error:active {
+  outline: 2px solid red;
+}
+
+#tip-selector {
+  padding: 1rem;
+}
+
+#tip-selector > p {
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+#tip-selector > div {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex: 3;
+  width: 100%;
+  gap: 1rem;
+  font-size: 24px;
+}
+
+.tip {
+  background-color: var(--Very_dark_cyan);
+  color: var(--White);
+  min-width: 5.35rem;
+  padding: 0.45rem 1rem;
+  border-radius: 0.5rem;
+  flex: 1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#tip-input-container {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#custom-tip {
+  text-align: center;
+  background-color: hsl(203, 50%, 97%);
+  color: var(--Very_dark_cyan);
+}
+
+#flex-item-2 {
+  background-color: var(--Very_dark_cyan);
+  border-radius: 1rem;
+  margin: 1.5rem 5%;
+  padding: 1.5rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tip-flex-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+}
+
+.tip-flex-item p:first-of-type {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tip-title {
+  font-weight: 700;
+  color: var(--White);
+}
+
+.tip-subtitle {
+  color: var(--Grayish_cyan);
+  font-size: small;
+}
+
+.tip-price {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--Strong_cyan);
+}
+
+button {
+  font-weight: 700;
+  width: 100%;
+  padding: 0.75rem 0;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--Very_dark_cyan);
+  background-color: var(--Strong_cyan);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background-color: hsl(183, 79%, 24%);
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    height: 85vh;
+    width: 85vw;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  #main {
+    height: 95vh;
+    width: 95vw;
+  }
+}
+
+@media all and (max-width: 480px) {
+  img {
+    margin: 2.25vh 0;
+  }
+
+  #main {
+    height: 95vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  #tip-calculator {
+    flex-direction: column;
+    margin: 2vh 0;
+  }
+
+  #flex-item-1 {
+    width: 100%;
+    height: 50%;
+  }
+
+  #flex-item-2 {
+    width: 90%;
+    height: 50%;
+  }
+}

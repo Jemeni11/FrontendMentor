@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <section id="main">
+    <img src="images/logo.svg" alt="logo" />
+    <section id="tip-calculator">
+      <section id="flex-item-1">
+        <div id="bill-container">
+          <p>
+            <span>Bill</span>
+          </p>
+          <input type="number" name="bill" id="bill" placeholder="0"
+            pattern="(0\.((0[1-9]{1})|([1-9]{1}([0-9]{1})?)))|(([1-9]+[0-9]*)(\.([0-9]{1,2}))?)" />
+        </div>
+        <div id="tip-selector">
+          <p>Select Tip %</p>
+          <div id="tip-container">
+            <span class="tip">5%</span>
+            <span class="tip">10%</span>
+            <span class="tip">15%</span>
+            <span class="tip">25%</span>
+            <span class="tip">50%</span>
+            <input class="tip" type="number" name="custom-tip" id="custom-tip" placeholder="Custom" />
+          </div>
+        </div>
+        <div id="people-container">
+          <p>
+            <span>Number of People</span>
+          </p>
+          <input type="number" name="no_of_people" id="no_of_people" placeholder="0" />
+        </div>
+      </section>
+      <section id="flex-item-2">
+        <div>
+          <div id="tip-amount" class="tip-flex-item">
+            <p>
+              <span class="tip-title">Tip Amount</span>
+              <span class="tip-subtitle">/ person</span>
+            </p>
+            <p id="tipAmountText" class="tip-price">$0.00</p>
+          </div>
+          <div id="tip-total" class="tip-flex-item">
+            <p>
+              <span class="tip-title">Total</span>
+              <span class="tip-subtitle">/ person</span>
+            </p>
+            <p id="tipTotalText" class="tip-price">$0.00</p>
+          </div>
+        </div>
+        <div>
+          <button disabled>RESET</button>
+        </div>
+      </section>
+    </section>
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
