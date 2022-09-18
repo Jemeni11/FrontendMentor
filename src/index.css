@@ -1,0 +1,126 @@
+:root {
+  --very_dark_grey: hsl(0, 0%, 17%);
+  --dark_grey: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+.Header {
+  height: 30vh;
+  background-image: url("./assets/images/pattern-bg.png");
+  text-align: center;
+}
+
+.Header > p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1.25rem 0;
+}
+
+.IP_InputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.IP_InputContainer > * {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.IP_InputContainer input {
+  width: 30rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.IP_InputContainer button {
+  background-color: var(--very_dark_grey);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border: none;
+}
+
+.IP_InputContainer button:hover {
+  background-color: var(--dark_grey);
+}
+
+.IP_DetailsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  position: relative;
+}
+
+.IP_Details {
+  background-color: white;
+  color: var(--dark_grey);
+  width: 65rem;
+  height: 8rem;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 500;
+}
+
+.IP_Details div {
+  flex: 1;
+  padding-inline: 1.5rem;
+}
+
+.IP_Details div:not(.IP_Details div:last-child) {
+  border-right: 1px solid var(--dark_grey);
+}
+
+.IP_Details p {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--very_dark_grey);
+}
+
+.Map {
+  height: 70vh;
+}
+
+@media screen and (max-width: 500px) {
+  .Header {
+    padding-inline: 1.25rem;
+    height: 40vh;
+  }
+
+  .IP_Details {
+    height: auto;
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .IP_Details div {
+    padding: 0.5rem 1.5rem;
+  }
+
+  .IP_Details div:not(.IP_Details div:last-child) {
+    border: none;
+  }
+
+  .Map {
+    height: 60vh;
+  }
+}
