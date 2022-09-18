@@ -25,7 +25,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Jemeni11/FrontendMentor/tree/09-ip-address-tracker-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://jemeni-ip-tracker.netlify.app/)
 
 ## My process
 
