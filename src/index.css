@@ -19,20 +19,24 @@ body {
 .Header {
   height: 30vh;
   background-image: url("./assets/images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
 }
 
 .Header > p {
   font-size: 1.5rem;
   font-weight: 500;
-  padding: 1.25rem 0;
+  /* padding: 1.25rem 0; */
+  padding: 4vh 0;
 }
 
 .IP_InputContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  margin-bottom: 4vh;
 }
 
 .IP_InputContainer > * {
@@ -99,7 +103,7 @@ body {
   height: 70vh;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .Header {
     padding-inline: 1.25rem;
     height: 40vh;
