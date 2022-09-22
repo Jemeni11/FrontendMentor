@@ -1,0 +1,202 @@
+:root {
+  /* Primary */
+  --Bright_Blue: hsl(220, 98%, 61%);
+  --Check_Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  /* Neutral */
+  /* Light Theme */
+  --Light__Very_Light_Gray: #fafafa;
+  --Light__Very_Light_Grayish_Blue: #e4e5f1;
+  --Light__Light_Grayish_Blue: #d2d3db;
+  --Light__Dark_Grayish_Blue: #9394a5;
+  --Light__Very_Dark_Grayish_Blue: #484b6a;
+  /* Dark Theme */
+  --Dark__Very_Dark_Blue: #161722;
+  --Dark__Very_Dark_Desaturated_Blue: #25273c;
+  --Dark__Light_Grayish_Blue: #cacde8;
+  --Dark__Light_Grayish_Blue_hover: #e4e5f1;
+  --Dark__Dark_Grayish_Blue: #777a92;
+  --Dark__Very_Dark_Grayish_Blue: #4d5066;
+  --Dark__Very_Dark_Grayish_Blue_2: #393a4c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  color: var(--Light__Very_Dark_Grayish_Blue);
+}
+
+.header,
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  height: 35vh;
+  justify-content: center;
+}
+
+.header > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  color: var(--Light__Very_Light_Gray);
+  padding: 1rem 0;
+}
+
+.header h1 {
+  letter-spacing: 1rem;
+  font-weight: 700;
+}
+
+#newTodoBox {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.25rem;
+}
+
+.headerLight {
+  background-image: url("./assets/images/bg-desktop-light.jpg");
+}
+
+.headerDark {
+  background-image: url("./assets/images/bg-desktop-dark.jpg");
+}
+
+.themeChangeButtonContainer > button {
+  background-color: transparent;
+  border: none;
+}
+
+.themeChangeButtonContainer > button:hover {
+  cursor: pointer;
+}
+
+.body {
+  height: 65vh;
+  justify-content: flex-start;
+}
+
+.todoItemList {
+  position: relative;
+  margin-top: -4.5vh;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.todoItemList,
+.todoFooter {
+  position: relative;
+  width: 40%;
+  background-color: var(--Light__Very_Light_Gray);
+  list-style: none;
+  border: 1px solid var(--Light__Very_Light_Gray);
+}
+
+.todoItemContainer {
+  padding: 1rem 0;
+  display: flex;
+  border-bottom: 1px solid var(--Light__Dark_Grayish_Blue);
+}
+
+.todoItemCompleted {
+  flex: 1;
+  width: 10%;
+  height: 100%;
+  text-align: center;
+}
+
+.todoItemCompleted > * {
+  margin-inline: auto;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.checkIconContainer {
+  background-image: var(--Check_Background);
+  cursor: pointer;
+}
+
+.todoCircle {
+  border: 1px solid #484b6a;
+  cursor: pointer;
+}
+
+.todoItemText {
+  flex: 8;
+  width: 80%;
+  cursor: pointer;
+}
+
+.todoItemCancelIconContainer {
+  flex: 1;
+  width: 10%;
+  height: 100%;
+}
+
+.todoItemCancelIconContainer button {
+  border: none;
+  background-color: transparent;
+}
+
+.todoItemCancelIconContainer button:hover {
+  cursor: pointer;
+}
+
+.todoItemCancelIconContainer img {
+  width: 75%;
+  height: 75%;
+}
+
+.todoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.todoFooter > * {
+  padding-inline: auto;
+}
+
+.todoFooter button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.todoFooterControls {
+  width: 33.3%;
+}
+
+.todoFooterControls ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bodyLight {
+  background-color: var(--Light__Very_Light_Grayish_Blue);
+}
+
+.bodyDark {
+  background-color: var(--Dark__Very_Dark_Blue);
+}
