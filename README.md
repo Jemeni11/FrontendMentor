@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Jemeni11/FrontendMentor/tree/)
+- Solution URL: [GitHub](https://github.com/Jemeni11/FrontendMentor/tree/10-todo-app-main)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
