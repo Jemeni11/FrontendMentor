@@ -1,6 +1,6 @@
 :root {
   /* Primary */
-  --Bright_Blue: hsl(220, 98%, 61%);
+  --Bright_Blue: #3a7bfd;
   --Check_Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   /* Neutral */
   /* Light Theme */
@@ -39,60 +39,9 @@ body {
   align-items: center;
 }
 
-.header {
-  height: 35vh;
-  justify-content: center;
-}
-
-.header > * {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 40%;
-  color: var(--Light__Very_Light_Gray);
-  padding: 1rem 0;
-}
-
-.header h1 {
-  letter-spacing: 1rem;
-  font-weight: 700;
-}
-
-#newTodoBox {
-  width: 100%;
-  outline: none;
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 0.25rem;
-}
-
-.headerLight {
-  background-image: url("./assets/images/bg-desktop-light.jpg");
-}
-
-.headerDark {
-  background-image: url("./assets/images/bg-desktop-dark.jpg");
-}
-
-.themeChangeButtonContainer > button {
-  background-color: transparent;
-  border: none;
-}
-
-.themeChangeButtonContainer > button:hover {
-  cursor: pointer;
-}
-
 .body {
   height: 65vh;
   justify-content: flex-start;
-}
-
-.todoItemList {
-  position: relative;
-  margin-top: -4.5vh;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
 }
 
 .todoItemList,
@@ -104,93 +53,9 @@ body {
   border: 1px solid var(--Light__Very_Light_Gray);
 }
 
-.todoItemContainer {
-  padding: 1rem 0;
-  display: flex;
-  border-bottom: 1px solid var(--Light__Dark_Grayish_Blue);
-}
-
-.todoItemCompleted {
-  flex: 1;
-  width: 10%;
-  height: 100%;
-  text-align: center;
-}
-
-.todoItemCompleted > * {
-  margin-inline: auto;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-}
-
-.checkIconContainer {
-  background-image: var(--Check_Background);
-  cursor: pointer;
-}
-
-.todoCircle {
-  border: 1px solid #484b6a;
-  cursor: pointer;
-}
-
-.todoItemText {
-  flex: 8;
-  width: 80%;
-  cursor: pointer;
-}
-
-.todoItemCancelIconContainer {
-  flex: 1;
-  width: 10%;
-  height: 100%;
-}
-
-.todoItemCancelIconContainer button {
+.todoItemListDark,
+.todoFooterDark {
   border: none;
-  background-color: transparent;
-}
-
-.todoItemCancelIconContainer button:hover {
-  cursor: pointer;
-}
-
-.todoItemCancelIconContainer img {
-  width: 75%;
-  height: 75%;
-}
-
-.todoFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  padding: 1rem;
-  font-weight: 500;
-}
-
-.todoFooter > * {
-  padding-inline: auto;
-}
-
-.todoFooter button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-  font-size: 1rem;
-  font-weight: inherit;
-}
-
-.todoFooterControls {
-  width: 33.3%;
-}
-
-.todoFooterControls ul{
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
 }
 
 .bodyLight {
@@ -199,4 +64,54 @@ body {
 
 .bodyDark {
   background-color: var(--Dark__Very_Dark_Blue);
+  color: var(--Dark__Light_Grayish_Blue);
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .header > *,
+  .todoItemList,
+  .todoFooter {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 530px) and (max-width: 700px) {
+  .header > *,
+  .todoItemList,
+  .todoFooter {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .header,
+  .body {
+    padding-inline: 2.5%;
+  }
+
+  .header > *,
+  .todoItemList,
+  .todoFooter {
+    width: 95%;
+  }
+
+  .todoFooterControls {
+    position: absolute;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-left: -1rem;
+    margin-top: 25vh;
+    background-color: var(--Light__Very_Light_Gray);
+    padding: 1rem;
+  }
+
+  .todoFooterControls ul {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .todoFooterControlsDark {
+    background-color: var(--Dark__Very_Dark_Desaturated_Blue);
+    color: var(--Dark__Light_Grayish_Blue);
+  }
 }

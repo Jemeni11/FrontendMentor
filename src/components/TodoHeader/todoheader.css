@@ -1,0 +1,76 @@
+.header {
+  height: 35vh;
+  justify-content: center;
+}
+
+.header > * {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+  color: var(--Light__Very_Light_Gray);
+  padding: 1rem 0;
+}
+
+.header h1 {
+  letter-spacing: 1rem;
+  font-weight: 700;
+}
+.TodoInput {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  border-radius: 0.25rem;
+  background-color: var(--Light__Very_Light_Gray);
+}
+
+.TodoInputDark {
+  background-color: var(--Dark__Very_Dark_Desaturated_Blue);
+  color: var(--Dark__Light_Grayish_Blue);
+}
+
+.TodoInputDark > input {
+  background-color: inherit;
+  color: inherit;
+}
+
+.TodoInput > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 10%;
+}
+
+.TodoInputCircle {
+  border: 1px solid #484b6a;
+}
+
+#newTodoBox {
+  flex: 9;
+  width: 90%;
+  outline: none;
+  border: none;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  padding: 0.75rem 2rem 0.75rem 0;
+  caret-color: var(--Bright_Blue);
+  font-size: 1.1rem;
+}
+
+.headerLight {
+  background-image: url("../../assets/images/bg-desktop-light.jpg");
+}
+
+.headerDark {
+  background-image: url("../../assets/images/bg-desktop-dark.jpg");
+}
+
+.themeChangeButtonContainer > button {
+  background-color: transparent;
+  border: none;
+}
+
+.themeChangeButtonContainer > button:hover {
+  cursor: pointer;
+}

@@ -1,8 +1,10 @@
-import classNameTheme from "../helpers/classnametheme";
+import classNameTheme from "../../helpers/classnametheme";
 import TodoInput from "./TodoInput";
-import Moon from "../assets/images/icon-moon.svg";
-import Sun from "../assets/images/icon-sun.svg";
-const TodoHeader = ({theme}) => {
+import Moon from "../../assets/images/icon-moon.svg";
+import Sun from "../../assets/images/icon-sun.svg";
+import "./todoheader.css"
+
+const TodoHeader = ({ theme }) => {
   return (
     <header className={classNameTheme(theme, "header")}>
       <div>
@@ -16,7 +18,7 @@ const TodoHeader = ({theme}) => {
           </button>
         </div>
       </div>
-      <TodoInput />
+      <TodoInput theme={theme} />
     </header>
   );
 };

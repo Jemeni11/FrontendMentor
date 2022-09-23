@@ -1,0 +1,83 @@
+.todoItemList {
+  position: relative;
+  margin-top: -4.5vh;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.todoItemListDark {
+  background-color: var(--Dark__Very_Dark_Desaturated_Blue);
+  color: var(--Dark__Very_Dark_Grayish_Blue);
+}
+
+.todoItemContainer {
+  padding: 1rem 0;
+  display: flex;
+  border-bottom: 1px solid var(--Light__Dark_Grayish_Blue);
+}
+
+.todoItemContainerDark {
+  background-color: var(--Dark__Very_Dark_Desaturated_Blue);
+  color: var(--Dark__Light_Grayish_Blue);
+  border-bottom: 1px solid var(--Dark__Very_Dark_Grayish_Blue);
+}
+
+.todoItemCompleted {
+  flex: 1;
+  width: 10%;
+  height: 100%;
+  text-align: center;
+}
+
+.todoItemCompleted > * {
+  margin-inline: auto;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+
+.checkIconContainer {
+  background-image: var(--Check_Background);
+  cursor: pointer;
+}
+
+.todoCircle {
+  border: 1px solid #484b6a;
+  cursor: pointer;
+}
+
+.todoCircle:hover {
+  background: linear-gradient(
+        var(--Light__Very_Light_Gray),
+        var(--Light__Very_Light_Gray)
+      )
+      padding-box,
+    var(--Check_Background) border-box;
+  border: 1px solid transparent;
+}
+
+.todoItemText {
+  flex: 8;
+  width: 80%;
+  cursor: pointer;
+}
+
+.todoItemCancelIconContainer {
+  flex: 1;
+  width: 10%;
+  height: 100%;
+}
+
+.todoItemCancelIconContainer button {
+  border: none;
+  background-color: transparent;
+}
+
+.todoItemCancelIconContainer button:hover {
+  cursor: pointer;
+}
+
+.todoItemCancelIconContainer img {
+  width: 75%;
+  height: 75%;
+}

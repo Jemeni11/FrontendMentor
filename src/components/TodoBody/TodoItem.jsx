@@ -1,12 +1,21 @@
-import { useState } from "react";
-import Check from "../assets/images/icon-check.svg";
-import Cross from "../assets/images/icon-cross.svg";
+import { useState, useEffect } from "react";
+import Check from "../../assets/images/icon-check.svg";
+import Cross from "../../assets/images/icon-cross.svg";
+import classNameTheme from "../../helpers/classnametheme";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import "./todobody.css"
 
-const TodoItem = ({ id, todo, completed, deleteTodo, onClick }) => {
+const TodoItem = ({ theme, todo, completed, deleteTodo, onClick }) => {
+  const { width } = useWindowDimensions();
   const [showCancelIcon, setShowCancelIcon] = useState(false);
+  useEffect(() => {
+    if (width < 530) {
+      setShowCancelIcon(true);
+    }
+  }, []);
   return (
     <li
-      className="todoItemContainer"
+      className={classNameTheme(theme, "todoItemContainer")}
       onMouseEnter={() => setShowCancelIcon(true)}
       onMouseLeave={() => setShowCancelIcon(false)}
     >

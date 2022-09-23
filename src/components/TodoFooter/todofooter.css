@@ -1,0 +1,43 @@
+.todoFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.todoFooterDark {
+  /* For some reason, !important is necessary */
+  background-color: var(--Dark__Very_Dark_Desaturated_Blue) !important;
+  color: var(--Dark__Very_Dark_Grayish_Blue);
+}
+
+.todoFooter > * {
+  padding-inline: auto;
+}
+
+.todoFooter button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: inherit;
+}
+
+.todoFooterControls {
+  width: 33.3%;
+}
+
+.todoFooterControls ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todoFooterControls ul li:hover,
+.todoFooterControls ul li button:hover {
+  color: var(--Dark__Very_Dark_Blue);
+}
