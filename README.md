@@ -1,5 +1,7 @@
 # Frontend Mentor - Todo app solution
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ddb6e153-78bc-4940-83d1-ebf647001dd3/deploy-status)](https://app.netlify.com/sites/jemeni-todo-app/deploys)
+
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
@@ -31,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Jemeni11/FrontendMentor/tree/10-todo-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://jemeni-todo-app.netlify.app/)
 
 ## My process
 
