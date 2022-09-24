@@ -127,20 +127,29 @@ input[type="number"] {
   padding-bottom: 1rem;
 }
 
-#tip-selector > div {
+#tip-container {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(30%, 1fr));
+  width: 98%;
+  gap: 1rem;
+  font-size: 24px;
+}
+/* 
+#tip-container {
   display: inline-flex;
   flex-wrap: wrap;
   flex: 3;
   width: 100%;
   gap: 1rem;
   font-size: 24px;
-}
+} */
 
 .tip {
   background-color: var(--Very_dark_cyan);
   color: var(--White);
-  min-width: 5.35rem;
-  padding: 0.45rem 1rem;
+  min-width: 5rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 0.5rem;
   flex: 1;
   font-weight: 700;
@@ -225,14 +234,14 @@ button:disabled {
   }
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 650px) and (max-width: 768px) {
   #main {
     height: 95vh;
     width: 95vw;
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 650px) {
   img {
     margin: 2.25vh 0;
   }
