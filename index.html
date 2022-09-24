@@ -14,16 +14,15 @@
 </head>
 
 <body>
-  <section id="main">
-    <img src="images/logo.svg" alt="logo" />
-    <section id="tip-calculator">
-      <section id="flex-item-1">
+  <div id="main">
+    <img src="images/logo.svg" alt="logo" role="banner"/>
+    <div id="tip-calculator" role="main">
+      <div id="flex-item-1">
         <div id="bill-container">
           <p>
             <span>Bill</span>
           </p>
-          <input type="number" name="bill" id="bill" placeholder="0"
-            pattern="(0\.((0[1-9]{1})|([1-9]{1}([0-9]{1})?)))|(([1-9]+[0-9]*)(\.([0-9]{1,2}))?)" />
+          <input type="number" name="bill" id="bill" placeholder="0"/>
         </div>
         <div id="tip-selector">
           <p>Select Tip %</p>
@@ -42,8 +41,8 @@
           </p>
           <input type="number" name="no_of_people" id="no_of_people" placeholder="0" />
         </div>
-      </section>
-      <section id="flex-item-2">
+      </div>
+      <div id="flex-item-2">
         <div>
           <div id="tip-amount" class="tip-flex-item">
             <p>
@@ -63,9 +62,9 @@
         <div>
           <button disabled>RESET</button>
         </div>
-      </section>
-    </section>
-  </section>
+      </div>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 
