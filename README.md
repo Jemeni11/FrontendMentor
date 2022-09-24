@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Jemeni11/FrontendMentor/tree/06-tip-calculator-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://elaborate-pithivier-64268d.netlify.app/)
 
 ## My process
 
