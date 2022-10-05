@@ -1,0 +1,104 @@
+.regionFilter {
+  min-height: 3rem;
+  padding-inline: 3vw;
+}
+
+.regionFilterLight {
+  background-color: var(--White);
+  color: var(--LM_VeryDarkBlue);
+}
+
+.regionFilterDark {
+  background-color: var(--DM_VeryDarkBlue);
+  color: var(--White);
+}
+
+.regionFilterDark button,
+.regionFilterDark .regionsList {
+  background-color: var(--DM_DarkBlue);
+}
+
+.regionFilter > * {
+  width: 58%;
+  border-radius: 0.25rem;
+}
+
+.regionFilter button,
+.regionsList li {
+  cursor: pointer;
+}
+
+.regionFilter button {
+  min-height: inherit;
+  margin-bottom: 0.5rem;
+  padding-left: 1.35rem;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  color: var(--White);
+}
+
+.arrowHead {
+  font-size: 1.45rem;
+}
+
+.regionsList {
+  list-style-type: none;
+  padding: 1rem 0;
+  position: absolute;
+  z-index: 999;
+}
+
+.regionsList li {
+  padding: 0.2rem 1rem 0.2rem 1.25rem;
+}
+
+@media screen and (min-width: 375px) and (max-width: 850px) {
+  .regionFilter {
+    min-height: 1rem;
+    width: 40%;
+    padding-inline: 0;
+  }
+
+  .regionFilter button {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    padding: 1rem 0.25rem 1rem 0.75rem;
+  }
+
+  .regionsList {
+    margin-top: 0.5rem;
+    left: calc(57.5% + 1.35vw);
+    right: 6vw;
+    width: auto;
+  }
+
+  .regionsList li {
+    padding: 0.35rem 1rem 0.35rem 0.75rem;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .regionFilter {
+    min-height: 1rem;
+    width: 20%;
+    padding-inline: 0;
+  }
+
+  .regionFilter button {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    padding: 10% 0.75rem 10% 1.25rem;
+  }
+
+  .regionsList {
+    margin-top: 0.5rem;
+    left: calc(75% + 1.35vw);
+    right: 6vw;
+    width: auto;
+  }
+}

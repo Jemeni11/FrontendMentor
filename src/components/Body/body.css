@@ -1,0 +1,54 @@
+.body {
+  padding-inline: 3vw;
+}
+
+.countryListContainer {
+  row-gap: 2rem;
+  padding: 5vh 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.country {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.countryFlagImageContainer {
+  width: 100%;
+  height: 10.5rem;
+}
+
+.countryFlagImage {
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 10.5rem;
+  object-fit: cover;
+}
+
+.bodyDark .countryInfo {
+  background-color: var(--DM_DarkBlue);
+}
+
+.countryInfo {
+  padding: 1.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.countryName {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 375px) {
+  .countryListContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 3rem;
+    padding: 5vh 0;
+  }
+}

@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  width: 100%;
+  min-height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3vw;
+  margin-bottom: 2rem;
+}
+
+.headerLight {
+  background-color: var(--White);
+}
+
+.headerDark {
+  background-color: var(--DM_DarkBlue);
+}
+
+.header button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.headerLight button,
+.headerLight button img {
+  color: var(--LM_VeryDarkBlue);
+  fill: var(--LM_VeryDarkBlue);
+}
+
+.headerDark button,
+.headerDark button img {
+  color: var(--White);
+}
+
+.header button img {
+  height: 1.25rem;
+  width: 1.25rem;
+}

@@ -1,0 +1,40 @@
+.inputContainer {
+  margin-bottom: 2.5rem;
+  padding-inline: 3vw;
+  display: flex;
+  width: 100%;
+}
+
+.inputContainer input {
+  padding: 1rem;
+  width: 100%;
+  border: none;
+}
+
+/* .inputContainerLight {
+} */
+
+.inputContainerLight input {
+  background-color: var(--LM_VeryLightGray);
+}
+
+/* .inputContainerDark {
+} */
+
+.inputContainerDark input {
+  background-color: var(--DM_DarkBlue);
+  color: var(--White);
+}
+
+.inputContainerDark input::placeholder {
+  color: var(--White);
+  opacity: 1; /* Firefox */
+}
+
+
+@media screen and (min-width: 375px) {
+  .inputContainer {
+    max-width: 40%;
+    margin-bottom: 0;
+  }
+}
