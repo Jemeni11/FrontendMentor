@@ -1,37 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import classNameTheme from "../../helpers/classnametheme";
 import "./filter.css";
 
-const Filter = ({
-  theme,
-  inputState,
-  countriesCtx,
-  setCountryList,
-  selectedRegion,
-  setSelectedRegion,
-}) => {
-  useEffect(() => {
-    if (selectedRegion !== "All") {
-      try {
-        const filterArray =
-          inputState.trim() === ""
-            ? countriesCtx.countries
-            : countriesCtx.countries?.filter((country) =>
-                country.name.common
-                  .toLowerCase()
-                  .includes(inputState.toLowerCase())
-              );
-        setCountryList(
-          filterArray?.filter((country) => country.region === selectedRegion)
-        );
-      } catch {
-        setCountryList([]);
-      }
-    } else {
-      setCountryList(countriesCtx.countries);
-    }
-  }, [selectedRegion, inputState, countriesCtx]);
-
+const Filter = ({ theme, selectedRegion, setSelectedRegion }) => {
   const [showRegionsListToggle, setShowRegionsListToggle] = useState(false);
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 

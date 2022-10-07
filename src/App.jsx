@@ -12,7 +12,7 @@ function App() {
   const countries = useContext(countryContext);
   const [inputState, setInputState] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
-  const [countryList, setCountryList] = useState(countries.countries);
+  const [countryList, setCountryList] = useState([]);
 
   const getCountries = async (URL = "https://restcountries.com/v3.1/all") => {
     const res = await fetch(URL);
@@ -20,16 +20,34 @@ function App() {
     countries.setCountries(resJson);
     let cca3ToCountryNameObject = {};
     resJson.forEach(
-      (country) =>
-        (cca3ToCountryNameObject[country.cca3] = country.name.common)
+      (country) => (cca3ToCountryNameObject[country.cca3] = country.name.common)
     );
     countries.setCCA3ToCountryName(cca3ToCountryNameObject);
+    setCountryList(resJson);
+    console.log(countryList);
   };
 
   useEffect(() => {
     getCountries();
-    setCountryList(countries.countries);
   }, []);
+
+  useEffect(() => {
+    let filterArray =
+      inputState.trim() === ""
+        ? countryList
+        : countries.countries?.filter((country) =>
+            country.name.common.toLowerCase().includes(inputState.toLowerCase())
+          );
+    if (selectedRegion === "All" && inputState.trim() !== "") {
+      setCountryList(filterArray);
+    } else if (selectedRegion === "All" && inputState.trim() === "") {
+      setCountryList(countries.countries);
+    } else {
+      setCountryList(
+        filterArray?.filter((country) => country.region === selectedRegion)
+      );
+    }
+  }, [selectedRegion, inputState, countries]);
 
   return (
     <div className={classNameTheme(theme, "app")}>
@@ -44,19 +62,11 @@ function App() {
                   theme={theme}
                   inputState={inputState}
                   setInputState={setInputState}
-                  countryArray={countries.countries}
-                  setCountryArray={countries.setCountries}
-                  setCountryList={setCountryList}
                 />
                 <Filter
                   theme={theme}
-                  countriesCtx={countries}
-                  inputState={inputState}
                   selectedRegion={selectedRegion}
                   setSelectedRegion={setSelectedRegion}
-                  countryList={countryList}
-                  setCountryList={setCountryList}
-                  
                 />
               </div>
               <Body theme={theme} countryList={countryList} />
