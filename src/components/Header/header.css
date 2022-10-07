@@ -27,15 +27,24 @@
 .headerLight button,
 .headerLight button img {
   color: var(--LM_VeryDarkBlue);
-  fill: var(--LM_VeryDarkBlue);
 }
 
-.headerDark button,
-.headerDark button img {
+.headerDark button {
   color: var(--White);
+}
+
+.headerDark button img {
+  filter: invert(98%) sepia(100%) saturate(12%) hue-rotate(224deg)
+    brightness(103%) contrast(100%);
 }
 
 .header button img {
   height: 1.25rem;
   width: 1.25rem;
+}
+
+@media screen and (min-width: 375px) {
+  .header {
+    margin-bottom: 4rem;
+  }
 }

@@ -4,6 +4,7 @@ import "./filter.css";
 
 const Filter = ({
   theme,
+  inputState,
   countriesCtx,
   setCountryList,
   selectedRegion,
@@ -12,10 +13,16 @@ const Filter = ({
   useEffect(() => {
     if (selectedRegion !== "All") {
       try {
+        const filterArray =
+          inputState.trim() === ""
+            ? countriesCtx.countries
+            : countriesCtx.countries?.filter((country) =>
+                country.name.common
+                  .toLowerCase()
+                  .includes(inputState.toLowerCase())
+              );
         setCountryList(
-          countriesCtx.countries?.filter(
-            (country) => country.region === selectedRegion
-          )
+          filterArray?.filter((country) => country.region === selectedRegion)
         );
       } catch {
         setCountryList([]);
@@ -23,7 +30,7 @@ const Filter = ({
     } else {
       setCountryList(countriesCtx.countries);
     }
-  }, [selectedRegion, countriesCtx]);
+  }, [selectedRegion, inputState, countriesCtx]);
 
   const [showRegionsListToggle, setShowRegionsListToggle] = useState(false);
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
@@ -36,7 +43,13 @@ const Filter = ({
       <button
         onClick={() => setShowRegionsListToggle((prevState) => !prevState)}
       >
-        <p>{selectedRegion === "All" ? <>Filter&nbsp;by&nbsp;Region</> : selectedRegion}</p>
+        <p>
+          {selectedRegion === "All" ? (
+            <>Filter&nbsp;by&nbsp;Region</>
+          ) : (
+            selectedRegion
+          )}
+        </p>
         <p
           className="arrowHead"
           style={

@@ -3,11 +3,25 @@ import classNameTheme from "../../helpers/classnametheme";
 import Search from "../../assets/images/icon-search.svg";
 import "./input.css";
 
-const Input = ({ theme, inputState, setInputState, getCountries }) => {
+const Input = ({
+  theme,
+  inputState,
+  setInputState,
+  countryArray,
+  setCountryArray,
+  setCountryList,
+  getCountries = "",
+}) => {
   useEffect(() => {
     if (inputState.trim() !== "") {
-      getCountries(
-        `https://restcountries.com/v3.1/name/${inputState.toLowerCase()}`
+      // getCountries(
+      //   `https://restcountries.com/v3.1/name/${inputState.toLowerCase()}`
+      // );
+
+      setCountryArray(prevState =>
+        prevState?.filter((country) =>
+          country.name.common.toLowerCase().includes(inputState.toLowerCase())
+        )
       );
     }
   }, [inputState]);
@@ -19,7 +33,10 @@ const Input = ({ theme, inputState, setInputState, getCountries }) => {
         type="text"
         placeholder="Search for a country..."
         value={inputState}
-        onChange={(e) => setInputState(e.target.value)}
+        onChange={(e) => {
+          setInputState(e.target.value)
+          console.log(e.target.value)
+        }}
       />
     </div>
   );

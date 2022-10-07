@@ -38,6 +38,10 @@ body {
 
 /* .inputFilterRow {} */
 
+button:hover {
+  cursor: pointer;
+}
+
 .fw-300 {
   font-weight: 300;
 }

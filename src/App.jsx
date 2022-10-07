@@ -44,14 +44,19 @@ function App() {
                   theme={theme}
                   inputState={inputState}
                   setInputState={setInputState}
-                  getCountries={getCountries}
+                  countryArray={countries.countries}
+                  setCountryArray={countries.setCountries}
+                  setCountryList={setCountryList}
                 />
                 <Filter
                   theme={theme}
                   countriesCtx={countries}
+                  inputState={inputState}
                   selectedRegion={selectedRegion}
                   setSelectedRegion={setSelectedRegion}
+                  countryList={countryList}
                   setCountryList={setCountryList}
+                  
                 />
               </div>
               <Body theme={theme} countryList={countryList} />

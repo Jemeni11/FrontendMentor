@@ -1,15 +1,42 @@
 .countryDetailsPageContainer {
-  height: calc(100vh - 7rem);
+  /* height: calc(100vh - 7rem); */
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 3.25rem;
   padding-inline: 6vw;
+  padding-bottom: 6vh;
 }
 
 .countryDetailsPageContainer button {
+  display: flex;
+  align-items: center;
   width: 6rem;
-  padding: 0.5rem 0;
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+}
+
+.countryDetailsPageContainer button img {
+  height: 90%;
+  object-fit: cover;
+  flex: 1;
+  font-weight: 700;
+}
+
+.appDark .countryDetailsPageContainer button {
+  background-color: var(--DM_DarkBlue);
+  color: var(--White);
+}
+
+.appDark .countryDetailsPageContainer button img {
+  filter: invert(98%) sepia(100%) saturate(12%) hue-rotate(224deg)
+    brightness(103%) contrast(100%);
+}
+
+.countryDetailsPageContainer button span {
+  flex: 2;
 }
 
 .countryDetailsPage {
@@ -18,10 +45,6 @@
   align-items: center;
   gap: 1rem;
 }
-
-/* .countryDetailsPage > * {
-  width: 50%;
-} */
 
 .countryDetailsPageImageContainer {
   height: 12.5rem;
@@ -47,8 +70,9 @@
 
 .borderCountriesButtonsContainer {
   margin: 0.5rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 1rem;
   column-gap: 1.75rem;
 }
@@ -56,20 +80,28 @@
 .borderCountriesButtonsContainer button {
   max-width: 9rem;
   padding: 0.5rem 0.5rem;
+  justify-content: center;
+  transition: transform 250ms;
 }
 
+.borderCountriesButtonsContainer button:hover {
+  cursor: pointer;
+  transform: translateY(-0.2rem);
+}
+
+@media screen and (min-width: 550px) and (max-width: 875px) {
+  .borderCountriesContainer {
+    flex-direction: column;
+  }
+}
 
 @media screen and (min-width: 550px) {
-  .countryDetailsPageContainer {
-    /* gap: 3.25rem;
-    padding-inline: 6vw; */
+  .countryDetailsPageContainer button {
+    padding: 0.25rem 1rem;
+    width: 7rem;
+    height: 2rem;
   }
-  
-  /* .countryDetailsPageContainer button {
-    width: 6rem;
-    padding: 0.5rem 0;
-  } */
-  
+
   .countryDetailsPage {
     display: flex;
     flex-direction: row;
@@ -77,34 +109,29 @@
     align-items: flex-start;
     gap: 2.5rem;
     height: 100%;
-    padding-top: 2rem;
   }
-  
-  /* .countryDetailsPage > * {
-    width: 50%;
-  } */
-  
+
   .countryDetailsPageImageContainer {
     width: 45%;
     height: 50vh;
   }
-  
+
   .countryDetailsPageImageContainer img {
-    max-height: max-content;
+    max-height: 100%;
     max-width: 100%;
   }
-  
+
   .countryDetailsPageInfoContainer {
     width: 55%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .countryDetailsPageInfoContainer h1 {
     margin: 0.5rem 0;
   }
-  
+
   .CDPI_Data {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -118,14 +145,8 @@
 
   .borderCountriesButtonsContainer {
     margin: 0;
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, 6rem);
-    /* grid-template-rows: repeat(auto-fill, 1fr); */
-    row-gap: 1rem;
-    column-gap: 1.75rem;
   }
-  
+
   .borderCountriesButtonsContainer button {
     padding: 0.5rem 0.5rem;
   }

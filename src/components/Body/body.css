@@ -14,6 +14,12 @@
 .country {
   width: 100%;
   border-radius: 1rem;
+  transition: transform 250ms;
+}
+
+.country:hover {
+  cursor: pointer;
+  transform: translateY(-0.75rem);
 }
 
 .countryFlagImageContainer {
