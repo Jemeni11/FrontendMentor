@@ -2,24 +2,46 @@
   margin-bottom: 2.5rem;
   padding-inline: 3vw;
   display: flex;
-  width: 100%;
+  align-items: center;
 }
 
 .inputContainer input {
   padding: 1rem;
   width: 100%;
   border: none;
+  outline: none;
 }
 
-/* .inputContainerLight {
-} */
+.inputContainer img {
+  max-width: 2rem;
+  max-height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.inputContainerLight {
+  background-color: var(--White);
+  color: var(--LM_DarkGray);
+  box-shadow: 0 4px 4px var(--BS_LighterGray);
+}
+
+.inputContainerLight img {
+  filter: invert(62%) sepia(1%) saturate(0%) hue-rotate(169deg) brightness(85%)
+    contrast(85%);
+}
 
 .inputContainerLight input {
   background-color: var(--LM_VeryLightGray);
 }
 
-/* .inputContainerDark {
-} */
+.inputContainerDark {
+  background-color: var(--DM_DarkBlue);
+  color: var(--White);
+}
+
+.inputContainerDark img {
+  filter: invert(98%) sepia(100%) saturate(12%) hue-rotate(224deg)
+    brightness(103%) contrast(100%);
+}
 
 .inputContainerDark input {
   background-color: var(--DM_DarkBlue);
@@ -31,10 +53,37 @@
   opacity: 1; /* Firefox */
 }
 
-
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 375px) {
   .inputContainer {
+    margin-inline: 3vw;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 530px) {
+  .inputContainer {
+    margin-inline: 3vw;
+  }
+}
+
+@media screen and (min-width: 530px) and (max-width: 600px) {
+  .inputContainer {
+    margin-inline: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px){
+  .inputContainer {
+    width: 40%;
     max-width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .inputContainer {
+    width: 50%;
+    max-width: 50%;
     margin-bottom: 0;
   }
 }

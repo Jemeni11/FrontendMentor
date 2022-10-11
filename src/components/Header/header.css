@@ -10,6 +10,8 @@
 
 .headerLight {
   background-color: var(--White);
+  box-shadow: 0 4px 4px var(--BS_LighterGray);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 120%, 0% 120%);
 }
 
 .headerDark {

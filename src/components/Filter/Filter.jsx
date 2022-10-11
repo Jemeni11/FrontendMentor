@@ -1,5 +1,7 @@
 import { useState } from "react";
 import classNameTheme from "../../helpers/classnametheme";
+import ExpandMore from "../../assets/images/icon-expand_more.svg";
+import ExpandLess from "../../assets/images/icon-expand_less.svg";
 import "./filter.css";
 
 const Filter = ({ theme, selectedRegion, setSelectedRegion }) => {
@@ -21,16 +23,11 @@ const Filter = ({ theme, selectedRegion, setSelectedRegion }) => {
             selectedRegion
           )}
         </p>
-        <p
+        <img
           className="arrowHead"
-          style={
-            showRegionsListToggle
-              ? { marginTop: "-5%" }
-              : { marginBottom: "-5%" }
-          }
-        >
-          {showRegionsListToggle ? "\u2304" : "\u2303"}
-        </p>
+          src={showRegionsListToggle ? ExpandMore : ExpandLess}
+          alt="expand"
+        />
       </button>
       {showRegionsListToggle && (
         <ul className="regionsList">

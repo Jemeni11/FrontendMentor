@@ -10,10 +10,7 @@ const Input = ({ theme, inputState, setInputState }) => {
         type="text"
         placeholder="Search for a country..."
         value={inputState}
-        onChange={(e) => {
-          setInputState(e.target.value);
-          console.log(e.target.value);
-        }}
+        onChange={(e) => setInputState(e.target.value)}
       />
     </div>
   );

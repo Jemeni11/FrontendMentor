@@ -24,9 +24,13 @@ const Country = () => {
   let countryJSX = <p>Loading ...</p>;
 
   if (countryObject?.length > 0) {
-    const nativeNameArray = Object.entries(countryObject[0]?.name.nativeName);
-    const nativeName = nativeNameArray[nativeNameArray.length - 1][1].official;
+    let nativeNameArray = [];
+    let nativeName = countryObject[0]?.name.common;
 
+    if (countryObject[0]?.name.hasOwnProperty("nativeName")) {
+      nativeNameArray = Object.entries(countryObject[0]?.name.nativeName);
+      nativeName = nativeNameArray[nativeNameArray.length - 1][1].official;
+    }
     const noOfCapitals = countryObject[0].capital?.length;
 
     const currenciesArray = [];
@@ -43,12 +47,16 @@ const Country = () => {
       ? countryObject[0].tld.join(", ")
       : "None";
 
-    const languagesObject = countryObject[0].languages;
     const languagesArray = [];
-    for (const [, value] of Object.entries(languagesObject)) {
-      languagesArray.push(`${value}`);
+    let languagesString = "None";
+
+    if (countryObject[0].hasOwnProperty("languages")) {
+      const languagesObject = countryObject[0].languages;
+      for (const [, value] of Object.entries(languagesObject)) {
+        languagesArray.push(`${value}`);
+      }
+      languagesString = languagesArray.join(", ");
     }
-    const languagesString = languagesArray.join(", ");
 
     countryJSX = (
       <div className="countryDetailsPageContainer">
@@ -81,7 +89,9 @@ const Country = () => {
                 </p>
                 <p>
                   <span className="fw-600">Sub Region: </span>
-                  {countryObject[0].subregion}
+                  {countryObject[0].hasOwnProperty("subregion")
+                    ? countryObject[0].subregion
+                    : "None"}
                 </p>
                 <p>
                   <span className="fw-600">Capital(s): </span>
@@ -133,7 +143,7 @@ const Country = () => {
     countryJSX
   ) : (
     <>
-      <p>Nothing to see here</p>
+      <p style={{ margin: "0 auto", width: "30ch" }}>Nothing to see here</p>
     </>
   );
 };

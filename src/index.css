@@ -7,7 +7,10 @@
   --LM_VeryLightGray: #fafafa; /* Background */
   /* Dark Mode */
   --DM_DarkBlue: #2b3945; /* Elements */
-  --DM_VeryDarkBlue: #202c37; /* Background */
+  --DM_VeryDarkBlue: hsl(209, 26%, 17%); /* Background */
+  /* Box Shadow */
+  --BS_LighterGray: #cccccc;
+  --BS_VeryVeryDarkBlue: hsl(207, 26%, 10%); /* Don't judge me :) */
 }
 
 * {
@@ -36,8 +39,6 @@ body {
   color: var(--White);
 }
 
-/* .inputFilterRow {} */
-
 button:hover {
   cursor: pointer;
 }
@@ -54,7 +55,7 @@ button:hover {
   font-weight: 800;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 530px) {
   .header,
   .inputFilterRow,
   .body {
@@ -72,4 +73,3 @@ button:hover {
     padding-inline: 0;
   }
 }
-

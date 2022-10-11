@@ -17,6 +17,10 @@
   transition: transform 250ms;
 }
 
+.bodyLight .country {
+  box-shadow: 0 4px 4px var(--BS_LighterGray);
+}
+
 .country:hover {
   cursor: pointer;
   transform: translateY(-0.75rem);
@@ -40,7 +44,7 @@
 }
 
 .countryInfo {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }

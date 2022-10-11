@@ -25,9 +25,15 @@
   font-weight: 700;
 }
 
+.appLight .countryDetailsPageContainer button {
+  background-color: var(--White);
+  box-shadow: 0 2.5px 2.5px var(--BS_LighterGray);
+}
+
 .appDark .countryDetailsPageContainer button {
   background-color: var(--DM_DarkBlue);
   color: var(--White);
+  box-shadow: 0 2.5px 2.5px var(--BS_VeryVeryDarkBlue);
 }
 
 .appDark .countryDetailsPageContainer button img {
@@ -68,23 +74,36 @@
   margin: 0.5rem 0;
 }
 
+.CDPI_Data > div {
+  line-height: 1.75rem;
+}
+
+.CDPI_Data > div:first-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.CDPI_Data > div:last-of-type {
+  margin-top: 1.5rem;
+}
+
 .borderCountriesButtonsContainer {
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   row-gap: 1rem;
-  column-gap: 1.75rem;
+  column-gap: 1rem;
 }
 
-.borderCountriesButtonsContainer button {
+.borderCountriesButtonsContainer > button {
   max-width: 9rem;
-  padding: 0.5rem 0.5rem;
+  height: 2.25rem;
+  padding: 0.35rem 0.5rem;
   justify-content: center;
   transition: transform 250ms;
 }
 
-.borderCountriesButtonsContainer button:hover {
+.borderCountriesButtonsContainer > button:hover {
   cursor: pointer;
   transform: translateY(-0.2rem);
 }
@@ -143,11 +162,11 @@
     gap: 1rem;
   }
 
-  .borderCountriesButtonsContainer {
+  .borderCountriesButtonsContainer > {
     margin: 0;
   }
 
-  .borderCountriesButtonsContainer button {
+  .borderCountriesButtonsContainer > button {
     padding: 0.5rem 0.5rem;
   }
 }
