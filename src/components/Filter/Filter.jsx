@@ -10,19 +10,18 @@ const Filter = ({ theme, selectedRegion, setSelectedRegion }) => {
 
   return (
     <div
-      aria-label="region-filter"
       className={classNameTheme(theme, "regionFilter")}
     >
       <button
         onClick={() => setShowRegionsListToggle((prevState) => !prevState)}
       >
-        <p>
+        <span>
           {selectedRegion === "All" ? (
             <>Filter&nbsp;by&nbsp;Region</>
           ) : (
             selectedRegion
           )}
-        </p>
+        </span>
         <img
           className="arrowHead"
           src={showRegionsListToggle ? ExpandMore : ExpandLess}

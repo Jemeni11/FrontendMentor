@@ -21,7 +21,7 @@ const Country = () => {
     (country) => country.cca3 === cca3
   );
 
-  let countryJSX = <p>Loading ...</p>;
+  let countryJSX = <p role="main">Loading ...</p>;
 
   if (countryObject?.length > 0) {
     let nativeNameArray = [];
@@ -59,7 +59,7 @@ const Country = () => {
     }
 
     countryJSX = (
-      <div className="countryDetailsPageContainer">
+      <div className="countryDetailsPageContainer" role="main">
         <button onClick={() => navigate("/")}>
           <img src={BackArrow} alt="go back" />
           <span>Back</span>
@@ -143,7 +143,7 @@ const Country = () => {
     countryJSX
   ) : (
     <>
-      <p style={{ margin: "0 auto", width: "30ch" }}>Nothing to see here</p>
+      <p style={{ margin: "0 auto", width: "30ch" }} role="main">Nothing to see here</p>
     </>
   );
 };

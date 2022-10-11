@@ -61,7 +61,7 @@ function App() {
         <Route
           path="/"
           element={
-            <>
+            <main>
               <div className={classNameTheme(theme, "inputFilterRow")}>
                 <Input
                   theme={theme}
@@ -79,7 +79,7 @@ function App() {
                 countryList={countryList}
                 isLoading={isLoading}
               />
-            </>
+            </main>
           }
         />
         <Route path=":cca3" element={<Country />} />
