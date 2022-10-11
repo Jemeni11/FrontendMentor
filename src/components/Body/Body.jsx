@@ -5,7 +5,7 @@ import "./body.css";
 const Body = ({ theme, countryList, isLoading }) => {
   let navigate = useNavigate();
   return (
-    <div className={classNameTheme(theme, "body")}>
+    <div className={classNameTheme(theme, "body")} role="main">
       {isLoading ? (
         <p>Loading...</p>
       ) : (

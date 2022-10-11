@@ -5,8 +5,8 @@ import "./header.css";
 
 const Header = ({ theme }) => {
   return (
-    <header className={classNameTheme(theme, "header")}>
-      <span className="fw-800">Where in the World?</span>
+    <header className={classNameTheme(theme, "header")} role="banner">
+      <h1 className="fw-800">Where in the World?</h1>
       <button onClick={() => theme.changeTheme(theme)}>
         <img src={theme.theme === "light" ? LightMode : DarkMode} alt="theme" />
         <span className="fw-300">
